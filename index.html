@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Church Room Booking</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+</head>
+<body>
+<header><div><strong>Church Room Booking</strong><span id="userArea" class="muted hidden"> · <span id="currentUser"></span></span></div><button id="logoutBtn" class="secondary hidden">Sign out</button></header>
+<main>
+<section id="loginView" class="card narrow">
+<h1>Church Room Booking</h1><p class="muted">Sign in to see availability and make bookings.</p>
+<form id="loginForm"><label>Email<input id="email" type="email" required></label><label>Password<input id="password" type="password" required></label><button>Sign in</button></form>
+<p id="loginMessage" class="notice"></p>
+</section>
+<section id="appView" class="hidden">
+<nav class="tabs"><button class="tab active" data-tab="organ">🎹 Organ Practice</button><button class="tab" data-tab="resource">🏠 Resource Room</button><button class="tab" data-tab="mine">📅 My Bookings</button><button id="adminTab" class="tab hidden" data-tab="admin">⚙ Admin</button></nav>
+<section id="organView"><div class="section-head"><div><h1>Organ Practice</h1><p class="muted">Sanctuary 1 · CHMS-confirmed FBPC Organ Practice</p></div><button id="refreshBtn" class="secondary">Refresh</button></div><div id="organSessions"></div><div id="organSelection" class="selection hidden"></div></section>
+<section id="resourceView" class="hidden"><div class="section-head"><div><h1>Resource Room</h1><p class="muted">30-minute slots · bookings are immediately confirmed</p></div></div><label>Date<input id="resourceDate" type="date"></label><div id="resourceDay"></div><div id="resourceSelection" class="selection hidden"></div></section>
+<section id="mineView" class="hidden"><h1>My Bookings</h1><div id="myBookings"></div></section>
+<section id="adminView" class="hidden"><h1>Administration</h1><div class="card"><div id="adminHealth"></div><button id="syncNowBtn">Sync CHMS now</button></div></section>
+</section>
+</main>
+<div id="toast" class="toast hidden"></div>
+<dialog id="bookingDialog"><form method="dialog" id="bookingForm"><h2 id="dialogTitle"></h2><p id="dialogSlots" class="muted"></p><label id="purposeLabel">Purpose<input id="purposeInput" maxlength="200"></label><div class="dialog-actions"><button type="button" id="dialogCancel" class="secondary">Cancel</button><button>Confirm booking</button></div></form></dialog>
+<script src="app.js"></script>
+</body>
+</html>
