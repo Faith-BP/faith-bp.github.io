@@ -17,10 +17,10 @@
 <p id="loginMessage" class="notice"></p>
 </section>
 <section id="appView" class="hidden">
-<nav class="tabs"><button class="tab active" data-tab="organ">🎹 Organ Practice</button><button class="tab" data-tab="resource">🏠 Resource Room</button><button class="tab" data-tab="mine">📅 My Bookings</button><button id="adminTab" class="tab hidden" data-tab="admin">⚙ Admin</button></nav>
+<nav class="tabs"><button class="tab active" data-tab="organ">🎹 Organ Practice</button><button class="tab" data-tab="resource">🏠 Resource Room</button><button class="tab" data-tab="guest">🛏 Guest Room</button><button class="tab" data-tab="mine">📅 My Bookings</button><button id="adminTab" class="tab hidden" data-tab="admin">⚙ Admin</button></nav>
 <section id="organView"><div class="section-head"><div><h1>Organ Practice</h1><p class="muted">Sanctuary 1 · CHMS-confirmed FBPC Organ Practice</p></div><button id="refreshBtn" class="secondary">Refresh</button></div><div id="organSessions"></div><div id="organSelection" class="selection hidden"></div></section>
-<section id="resourceView" class="hidden"><div class="section-head"><div><h1>Resource Room</h1><p class="muted">30-minute slots · bookings are immediately confirmed</p></div></div><label>Date<input id="resourceDate" type="date"></label><div id="resourceDay"></div><div id="resourceSelection" class="selection hidden"></div></section>
-<section id="mineView" class="hidden"><h1>My Bookings</h1><div id="myBookings"></div></section>
+<section id="resourceView" class="hidden"><div class="section-head"><div><h1>Resource Room</h1><p class="muted">30-minute slots · 8:00 AM–10:00 PM · bookings are immediately confirmed</p></div></div><label>Date<input id="resourceDate" type="date"></label><div id="resourceCalendar" class="calendar-card"></div><div id="resourceDay"></div><div id="resourceSelection" class="selection hidden"></div></section>
+<section id="guestView" class="hidden"><div class="section-head"><div><h1>Guest Room</h1><p class="muted">60-minute slots · 8:00 AM–10:00 PM · bookings are immediately confirmed</p></div></div><label>Date<input id="guestDate" type="date"></label><div id="guestCalendar" class="calendar-card"></div><div id="guestDay"></div><div id="guestSelection" class="selection hidden"></div></section><section id="mineView" class="hidden"><h1>My Bookings</h1><div id="myBookings"></div></section>
 <section id="adminView" class="hidden"><h1>Administration</h1><div class="card"><div id="adminHealth"></div><button id="syncNowBtn">Sync CHMS now</button></div></section>
 </section>
 </main>
