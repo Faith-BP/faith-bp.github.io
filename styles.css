@@ -23,3 +23,6 @@
 .month-booking.booking-guest{background:#dcecfc;border-left:4px solid #2877c7;color:#164b7d}
 .month-booking.booking-resource{background:#fff0bf;border-left:4px solid #c18a00;color:#6c4a00}
 .month-booking.booking-organ span,.month-booking.booking-guest span,.month-booking.booking-resource span{color:inherit;opacity:.85}
+
+/* Admin user management */
+.user-admin-row{border-top:1px solid #d8dee8;padding:12px 0}.user-admin-fields{display:grid;grid-template-columns:1.2fr 1.2fr .8fr auto;gap:10px;align-items:end}.user-admin-fields label{min-width:0}.user-admin-fields input,.user-admin-fields select{width:100%;box-sizing:border-box}@media(max-width:760px){.user-admin-fields{grid-template-columns:1fr 1fr}.user-admin-fields label:first-child{grid-column:1/-1}}
