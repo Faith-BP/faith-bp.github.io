@@ -26,3 +26,16 @@
 
 /* Admin user management */
 .user-admin-row{border-top:1px solid #d8dee8;padding:12px 0}.user-admin-fields{display:grid;grid-template-columns:1.2fr 1.2fr .8fr auto;gap:10px;align-items:end}.user-admin-fields label{min-width:0}.user-admin-fields input,.user-admin-fields select{width:100%;box-sizing:border-box}@media(max-width:760px){.user-admin-fields{grid-template-columns:1fr 1fr}.user-admin-fields label:first-child{grid-column:1/-1}}
+
+/* My Bookings: clearly identify linked and adjacent ranges */
+.my-booking-card{display:block}
+.my-booking-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.booking-range{font-weight:500}
+.linked-badge{background:#e5f3e8;color:#216b36}
+.adjacent-badge{background:#e5eefc;color:#245a9b}
+.booking-range-details{margin-top:10px;border-top:1px solid #e1e5ea;padding-top:8px}
+.booking-range-details summary{cursor:pointer;color:#435160;font-weight:600}
+.booking-slot-line{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid #eef0f3}
+.booking-actions{display:flex;justify-content:flex-end;margin-top:12px}
+.small-action{padding:6px 10px;font-size:13px}
+@media(max-width:600px){.my-booking-heading{flex-direction:column}.booking-slot-line{align-items:flex-start}}
