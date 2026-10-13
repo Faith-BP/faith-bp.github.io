@@ -11,3 +11,15 @@
 .legend-resource{background:#fff0bf;border-left:4px solid #c28b00}
 .selection>span{white-space:normal;line-height:1.6}
 #dialogSlots{white-space:pre-line}
+
+/* Dashboard legend and booking-type colours */
+.booking-legend{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:14px 0 18px}
+.booking-legend span{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border:1px solid #d5dbe1;border-radius:8px;background:#fff;font-size:14px;white-space:nowrap}
+.booking-legend i{display:inline-block;width:12px;height:12px;border-radius:3px;flex:0 0 12px}
+.booking-legend .legend-organ i{background:#278344}
+.booking-legend .legend-guest i{background:#2877c7}
+.booking-legend .legend-resource i{background:#c18a00}
+.month-booking.booking-organ{background:#d9f2df;border-left:4px solid #278344;color:#174c29}
+.month-booking.booking-guest{background:#dcecfc;border-left:4px solid #2877c7;color:#164b7d}
+.month-booking.booking-resource{background:#fff0bf;border-left:4px solid #c18a00;color:#6c4a00}
+.month-booking.booking-organ span,.month-booking.booking-guest span,.month-booking.booking-resource span{color:inherit;opacity:.85}
