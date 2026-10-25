@@ -19,15 +19,23 @@
 <button class="tab" data-tab="organ">🎹 Organ Practice</button>
 <button class="tab" data-tab="rooms">🏠 Rooms</button>
 <button class="tab" data-tab="mine">📅 My Bookings</button>
+<button class="tab" data-tab="account">👤 My Account</button>
 <button id="adminTab" class="tab hidden" data-tab="admin">⚙ Admin</button>
 </nav>
 <section id="dashboardView"><div class="section-head"><div><h1>Dashboard</h1><p id="dashboardDescription" class="muted">Monthly Overview of All Bookings</p></div><div class="dashboard-filter"><label>Filter By<select id="dashboardRoom"><option value="all">All rooms</option><option value="organ">Organ Practice</option></select></label></div></div><div class="booking-legend" aria-label="Booking type legend"><span class="legend-organ"><i aria-hidden="true"></i>Organ Practice</span><span class="legend-guest"><i aria-hidden="true"></i>Guest Room</span><span class="legend-resource"><i aria-hidden="true"></i>Resource Room</span></div><div id="dashboardCalendar" class="month-calendar"></div></section>
 <section id="organView" class="hidden"><div class="section-head"><div><h1>Organ Practice</h1><p class="muted">Sanctuary 1 · CHMS-confirmed FBPC Organ Practice</p></div><button id="refreshBtn" class="secondary">Refresh</button></div><div id="organSessions"></div><div id="organSelection" class="selection hidden"></div></section>
 <section id="roomsView" class="hidden"><div class="section-head"><div><h1 id="roomTitle">Resource Room</h1><p id="roomSubtitle" class="muted"></p></div><label class="room-picker">Room<select id="roomSelect"></select></label></div><label>Date<input id="roomDate" type="date"></label><div id="roomCalendar" class="calendar-card"></div><div id="roomDay"></div><div id="roomSelection" class="selection hidden"></div></section>
 <section id="mineView" class="hidden"><h1>My Bookings</h1><div id="myBookings"></div></section>
+<section id="accountView" class="hidden">
+ <h1>My Account</h1>
+ <div class="card"><h2>Account details</h2><p><b>Display name:</b> <span id="accountDisplayName">—</span></p><p><b>Email:</b> <span id="accountEmail">—</span></p></div>
+ <div class="card"><h2>Change password</h2><p class="muted">Enter your current password and choose a new password.</p>
+ <form id="changePasswordForm"><label>Current password<input id="currentAccountPassword" type="password" autocomplete="current-password" required></label><label>New password<input id="newAccountPassword" type="password" autocomplete="new-password" minlength="10" required></label><label>Confirm new password<input id="confirmAccountPassword" type="password" autocomplete="new-password" minlength="10" required></label><button id="changePasswordBtn">Change password</button><p id="changePasswordMessage" class="notice hidden" role="status"></p></form></div>
+ <div class="card"><h2>Forgot your password?</h2><p class="muted">Send a password-reset link to your account email address.</p><button type="button" id="sendResetEmail" class="secondary">Send password-reset email</button><p id="resetPasswordMessage" class="notice hidden" role="status"></p></div>
+</section>
 <section id="adminView" class="hidden"><h1>Administration</h1><div class="card"><div id="adminHealth"></div><button id="syncNowBtn">Sync CHMS now</button></div><div class="card"><h2>Email notifications</h2><p class="muted">The booking user always receives a notification. You can also notify all administrators and/or additional email addresses.</p><label class="check"><input id="notifyAllAdmins" type="checkbox"> Notify all admin users</label><div class="admin-recipient-add"><input id="recipientEmail" type="email" placeholder="additional@example.com"><input id="recipientLabel" type="text" placeholder="Label (optional)"><button id="addRecipient">Add recipient</button></div><div id="recipientList"></div></div><div class="card"><h2>User management</h2><p class="muted">Set display names and assign User, Pianist, or Admin access.</p><div id="userManagement"></div></div></section>
 </section></main>
 <div id="toast" class="toast hidden"></div>
 <dialog id="bookingDialog"><form method="dialog" id="bookingForm"><h2 id="dialogTitle"></h2><p id="dialogSlots" class="muted"></p><label id="purposeLabel">Purpose<input id="purposeInput" maxlength="200"></label><div class="dialog-actions"><button type="button" id="dialogCancel" class="secondary">Cancel</button><button>Confirm booking</button></div></form></dialog>
-<script src="app.js?v=20261013-mass-booking-cancel-range-fix"></script>
+<script src="app.js?v=20261025-password-account-v1"></script>
 </body></html>

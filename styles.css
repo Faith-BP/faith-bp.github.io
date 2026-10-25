@@ -39,3 +39,9 @@
 .booking-actions{display:flex;justify-content:flex-end;margin-top:12px}
 .small-action{padding:6px 10px;font-size:13px}
 @media(max-width:600px){.my-booking-heading{flex-direction:column}.booking-slot-line{align-items:flex-start}}
+
+/* Account and secure admin password management */
+.user-admin-fields{grid-template-columns:1.2fr 1.2fr .8fr auto}
+.admin-temp-password-label{grid-column:1 / span 3}
+@media(max-width:760px){.user-admin-fields{grid-template-columns:1fr 1fr}.admin-temp-password-label{grid-column:1/-1}}
+#changePasswordMessage,#resetPasswordMessage{white-space:normal}
