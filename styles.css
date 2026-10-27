@@ -45,3 +45,6 @@
 .admin-temp-password-label{grid-column:1 / span 3}
 @media(max-width:760px){.user-admin-fields{grid-template-columns:1fr 1fr}.admin-temp-password-label{grid-column:1/-1}}
 #changePasswordMessage,#resetPasswordMessage{white-space:normal}
+
+/* Login password reset link */
+#loginResetLink{display:inline-block;margin-top:2px;font-weight:600;color:#245a9b}#loginResetLink[aria-disabled="true"]{opacity:.6;pointer-events:none}
