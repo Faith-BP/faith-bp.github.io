@@ -16,14 +16,14 @@
 <div id="appStatus" class="notice hidden" role="alert"></div>
 <nav class="tabs">
 <button class="tab active" data-tab="dashboard">📊 Dashboard</button>
-<button class="tab" data-tab="organ">🎹 Organ Practice</button>
+<button class="tab" data-tab="organ">🎹 S1 Practice</button>
 <button class="tab" data-tab="rooms">🏠 Rooms</button>
 <button class="tab" data-tab="mine">📅 My Bookings</button>
 <button class="tab" data-tab="account">👤 My Account</button>
 <button id="adminTab" class="tab hidden" data-tab="admin">⚙ Admin</button>
 </nav>
-<section id="dashboardView"><div class="section-head"><div><h1>Dashboard</h1><p id="dashboardDescription" class="muted">Monthly Overview of All Bookings</p></div><div class="dashboard-filter"><label>Filter By<select id="dashboardRoom"><option value="all">All rooms</option><option value="organ">Organ Practice</option></select></label></div></div><div class="booking-legend" aria-label="Booking type legend"><span class="legend-organ"><i aria-hidden="true"></i>Organ Practice</span><span class="legend-guest"><i aria-hidden="true"></i>Guest Room</span><span class="legend-resource"><i aria-hidden="true"></i>Resource Room</span></div><div id="dashboardCalendar" class="month-calendar"></div></section>
-<section id="organView" class="hidden"><div class="section-head"><div><h1>Organ Practice</h1><p class="muted">Sanctuary 1 · CHMS-confirmed FBPC Organ Practice</p></div><button id="refreshBtn" class="secondary">Refresh</button></div><div id="organSessions"></div><div id="organSelection" class="selection hidden"></div></section>
+<section id="dashboardView"><div class="section-head"><div><h1>Dashboard</h1><p id="dashboardDescription" class="muted">Monthly Overview of All Bookings</p></div><div class="dashboard-filter"><label>Filter By<select id="dashboardRoom"><option value="all">All rooms</option><option value="organ">S1 Practice</option></select></label></div></div><div class="booking-legend" aria-label="Booking type legend"><span class="legend-organ"><i aria-hidden="true"></i>S1 Practice</span><span class="legend-guest"><i aria-hidden="true"></i>Guest Room</span><span class="legend-resource"><i aria-hidden="true"></i>Resource Room</span></div><div id="dashboardCalendar" class="month-calendar"></div></section>
+<section id="organView" class="hidden"><div class="section-head"><div><h1>S1 Practice</h1><p class="muted">Sanctuary 1 · Practice room availability</p></div><button id="refreshBtn" class="secondary">Refresh</button></div><div id="organSessions"></div><div id="organSelection" class="selection hidden"></div></section>
 <section id="roomsView" class="hidden"><div class="section-head"><div><h1 id="roomTitle">Resource Room</h1><p id="roomSubtitle" class="muted"></p></div><label class="room-picker">Room<select id="roomSelect"></select></label></div><label>Date<input id="roomDate" type="date"></label><div id="roomCalendar" class="calendar-card"></div><div id="roomDay"></div><div id="roomSelection" class="selection hidden"></div></section>
 <section id="mineView" class="hidden"><h1>My Bookings</h1><div id="myBookings"></div></section>
 <section id="accountView" class="hidden">
